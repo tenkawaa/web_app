@@ -18,14 +18,12 @@
 
 <div class="top_text">
     <h2>Hi!</h2>
-    1
     <button id="btn">some button</button>
 </div>
 
 
 <script>
     let tg = window.Telegram.WebApp;
-    tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
     let button = document.getElementById("btn")
 
     btn.addEventListener("click", () => {
