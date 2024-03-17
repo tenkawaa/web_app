@@ -32,7 +32,7 @@
         let count = document.getElementById("count")
         let data = {
             type: 1,
-            count: count.ariaValueNow
+            count: count.value
         };
         tg.sendData(JSON.stringify(data));
     });
