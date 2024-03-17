@@ -6,29 +6,46 @@
             font-family: sans-serif;
             background-color: var(--tg-theme-bg-color);
             color: var(--tg-theme-text-color);
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
+            font-size: 30px;
             color-scheme: var(--tg-color-scheme);
+            display: flex;
+            flex-direction: column;
+        }
+        .buy_form {
+        	flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        select { 
+            height: 30; 
+            width: 50;
+        }
+        #count {
+        	margin: 5%;
+            width: 90%;
         }
     </style>
 </head>
 <body>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-<div class="top_text">
-    <h2>Hi!</h2>
-    <select id="account_type">
-    	<option>type 1</option>
-        <option>type 2</option>
-        <option>type 3</option>
-    </select>
-  <br>
-    <label for="count">Accounts count</label>
-    <input type="range" id="count" name="count" min="1" max="100" value=1><br/>
-    <p id="count_val">Count: 1</p>
-    <button id="btn">buy</button>
+<div class="buy_form" id="type_form">
+	<div>
+        <select id="account_type">
+        	<option>type 1</option>
+            <option>type 2</option>
+            <option>type 3</option>
+        </select>
+    </div>
+	<div>
+		<div>
+            <label for="count">Accounts count</label>
+            <input type="range" id="count" name="count" min="1" max="100" value=1>
+         </div>
+        <p id="count_val">Count: 1</p>
+    </div>
 </div>
+<button id="btn">buy</button>
 
 
 <script>
