@@ -24,6 +24,7 @@
 
 <script>
     let tg = window.Telegram.WebApp;
+    tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
     let button = document.getElementById("btn")
 
     btn.addEventListener("click", () => {
