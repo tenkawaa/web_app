@@ -18,7 +18,9 @@
 
 <div class="top_text">
     <h2>Hi!</h2>
-    <button id="btn">some button</button>
+    <label for="count">Accounts count</label>
+    <input type="range" id="count" name="count" min="0" max="100"><br/>
+    <button id="btn">buy</button>
 </div>
 
 
@@ -27,8 +29,10 @@
     let button = document.getElementById("btn")
 
     btn.addEventListener("click", () => {
+        let count = document.getElementById("count")
         let data = {
-            text: "hi"
+            type: 1,
+            count: count.ariaValueNow
         };
         tg.sendData(JSON.stringify(data));
     });
